@@ -752,11 +752,11 @@
             document.getElementById('totalFeedback').textContent = data.total_feedback || 0;
             document.getElementById('correctPredictions').textContent = data.correct_predictions || 0;
             document.getElementById('incorrectPredictions').textContent = data.incorrect_predictions || 0;
-            document.getElementById('accuracy').textContent = `${(data.accuracy * 100).toFixed(1)}%`;
+            document.getElementById('accuracy').textContent = `${data.accuracy.toFixed(1)}%`;
             document.getElementById('unprocessedFeedback').textContent = data.unprocessed_feedback || 0;
             
             // 정확도 바 업데이트
-            const accuracyPercent = (data.accuracy * 100).toFixed(1);
+            const accuracyPercent = data.accuracy.toFixed(1);
             document.getElementById('accuracyBar').style.width = `${accuracyPercent}%`;
             document.getElementById('accuracyText').textContent = `${accuracyPercent}%`;
             
