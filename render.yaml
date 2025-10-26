@@ -1,0 +1,25 @@
+# Render 배포 설정
+
+## 빌드 명령어
+```bash
+pip install -r requirements.txt
+```
+
+## 시작 명령어
+```bash
+python app.py
+```
+
+## 환경 변수
+- `PORT`: 자동 설정됨 (Render에서 제공)
+- `FLASK_ENV`: production
+- `DEBUG`: False
+
+## 포트 바인딩
+- Render는 `PORT` 환경 변수를 통해 포트를 제공합니다
+- `app.py`에서 이를 자동으로 감지하여 사용합니다
+
+## 주의사항
+- AI 모델 파일들은 용량이 크므로 GitHub에 업로드되지 않습니다
+- 첫 실행 시 Hugging Face에서 모델을 다운로드합니다
+- 모델 다운로드로 인해 초기 배포 시간이 길어질 수 있습니다
