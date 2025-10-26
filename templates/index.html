@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Detector - AI 생성 이미지 탐지기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        /* 햄버거 메뉴 */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* 사이드바 메뉴 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 80px 20px 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin: 15px 0;
+        }
+        
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        /* 오버레이 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* 메인 컨테이너 */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        /* 업로드 영역 */
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: #fafafa;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+        
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #e8f2ff;
+            transform: scale(1.02);
+        }
+        
+        .upload-icon {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .upload-text {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .upload-hint {
+            font-size: 0.9em;
+            color: #999;
+        }
+        
+        /* 버튼 */
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* 결과 영역 */
+        .result-area {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            display: none;
+        }
+        
+        .result-area.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        /* 업로드된 이미지 표시 영역 */
+        .uploaded-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        
+        .image-info {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-header {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .result-fake {
+            color: #e74c3c;
+        }
+        
+        .result-real {
+            color: #27ae60;
+        }
+        
+        .confidence {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        
+        .model-type {
+            background: #e8f2ff;
+            color: #667eea;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        /* 분석 설명 */
+        .analysis-explanation {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+            text-align: left;
+        }
+        
+        .analysis-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .analysis-content {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .analysis-points {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .analysis-points li {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        /* 피드백 영역 */
+        .feedback-area {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            display: none;
+        }
+        
+        .feedback-area.show {
+            display: block;
+        }
+        
+        .feedback-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .feedback-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .feedback-btn.correct {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .feedback-btn.incorrect {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .feedback-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .feedback-form {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .feedback-form.show {
+            display: block;
+        }
+        
+        .feedback-form select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            font-size: 1em;
+        }
+        
+        /* 로딩 */
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 하단 탭 네비게이션 */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            padding: 8px 12px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            min-width: 60px;
+        }
+        
+        .nav-tab:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 4px;
+        }
+        
+        .nav-label {
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        /* 메인 컨테이너 하단 여백 추가 */
+        .container {
+            margin-bottom: 80px;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+                margin-bottom: 100px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .upload-area {
+                padding: 30px 15px;
+            }
+            
+            .feedback-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sidebar {
+                width: 100%;
+                left: -100%;
+            }
+            
+            .bottom-nav {
+                padding: 8px 0;
+            }
+            
+            .nav-tab {
+                padding: 6px 8px;
+                min-width: 50px;
+            }
+            
+            .nav-icon {
+                font-size: 1.3em;
+            }
+            
+            .nav-label {
+                font-size: 0.7em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+        
+        /* 메시지 */
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+        
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <!-- 햄버거 메뉴 -->
+    <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- 사이드바 -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="/">🏠 홈</a></li>
+            <li><a href="/features">🔍 기능 소개</a></li>
+            <li><a href="/stats">📊 통계 보기</a></li>
+            <li><a href="/about">ℹ️ 사이트 정보</a></li>
+        </ul>
+    </div>
+    
+    <!-- 오버레이 -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <h1>🤖 AI Image Detector</h1>
+        <p class="subtitle">AI 생성 이미지와 실제 이미지를 구분하는 고급 탐지 시스템</p>
+        
+        <!-- 업로드 영역 -->
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">이미지를 업로드하세요</div>
+            <div class="upload-hint">클릭하거나 드래그 앤 드롭으로 파일을 선택하세요</div>
+            <input type="file" id="fileInput" class="file-input" accept="image/*" onchange="handleFileSelect(event)">
+        </div>
+        
+        <!-- 로딩 -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>이미지를 분석 중입니다...</p>
+        </div>
+        
+        <!-- 결과 영역 -->
+        <div class="result-area" id="resultArea">
+            <!-- 업로드된 이미지 표시 -->
+            <div class="uploaded-image-container" id="uploadedImageContainer">
+                <img class="uploaded-image" id="uploadedImage" style="display: none;">
+                <div class="image-info" id="imageInfo"></div>
+            </div>
+            
+            <!-- 분석 결과 -->
+            <div class="result-header" id="resultHeader"></div>
+            <div class="confidence" id="confidence"></div>
+            <div class="model-type" id="modelType"></div>
+            <div class="analysis-explanation" id="analysisExplanation"></div>
+        </div>
+        
+        <!-- 피드백 영역 -->
+        <div class="feedback-area" id="feedbackArea">
+            <h3>예측 결과가 정확한가요?</h3>
+            <div class="feedback-buttons">
+                <button class="feedback-btn correct" onclick="submitFeedback(true)">✅ 정확합니다</button>
+                <button class="feedback-btn incorrect" onclick="showFeedbackForm()">❌ 틀렸습니다</button>
+            </div>
+            <div class="feedback-form" id="feedbackForm">
+                <p>올바른 답은 무엇인가요?</p>
+                <select id="correctLabel">
+                    <option value="REAL">REAL (실제 이미지)</option>
+                    <option value="FAKE">FAKE (AI 생성 이미지)</option>
+                </select>
+                <button class="btn" onclick="submitCorrectFeedback()">피드백 제출</button>
+            </div>
+        </div>
+        
+        <!-- 메시지 영역 -->
+        <div id="messageArea"></div>
+    </div>
+    
+    <!-- 하단 탭 네비게이션 -->
+    <div class="bottom-nav">
+        <a href="/" class="nav-tab active" id="homeTab">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">홈</div>
+        </a>
+        <a href="/features" class="nav-tab" id="featuresTab">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">기능소개</div>
+        </a>
+        <a href="/stats" class="nav-tab" id="statsTab">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">통계보기</div>
+        </a>
+        <a href="/about" class="nav-tab" id="aboutTab">
+            <div class="nav-icon">ℹ️</div>
+            <div class="nav-label">사이트정보</div>
+        </a>
+    </div>
+    
+    <script>
+        let currentImagePath = null;
+        let currentPrediction = null;
+        
+        // 사이드바 토글
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+        
+        // 드래그 앤 드롭 처리
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+        
+        function handleDragLeave(e) {
+            e.currentTarget.classList.remove('dragover');
+        }
+        
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        }
+        
+        // 파일 선택 처리
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+        
+        // 파일 처리
+        function handleFile(file) {
+            // 파일 타입 확인
+            if (!file.type.startsWith('image/')) {
+                showMessage('이미지 파일만 업로드 가능합니다.', 'error');
+                return;
+            }
+            
+            // 파일 크기 확인 (10MB 제한)
+            if (file.size > 10 * 1024 * 1024) {
+                showMessage('파일 크기는 10MB 이하여야 합니다.', 'error');
+                return;
+            }
+            
+            // 업로드된 이미지 미리보기 표시
+            showUploadedImage(file);
+            
+            // FormData 생성
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            // 로딩 표시
+            showLoading(true);
+            hideResult();
+            hideFeedback();
+            
+            // 서버로 전송
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                showLoading(false);
+                if (data.error) {
+                    showMessage(data.error, 'error');
+                } else {
+                    currentImagePath = data.temp_file_path;
+                    currentPrediction = data;
+                    showResult(data);
+                    showFeedback();
+                }
+            })
+            .catch(error => {
+                showLoading(false);
+                showMessage('업로드 중 오류가 발생했습니다.', 'error');
+                console.error('Error:', error);
+            });
+        }
+        
+        // 업로드된 이미지 표시
+        function showUploadedImage(file) {
+            const uploadedImage = document.getElementById('uploadedImage');
+            const imageInfo = document.getElementById('imageInfo');
+            
+            // FileReader로 이미지 읽기
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedImage.src = e.target.result;
+                uploadedImage.style.display = 'block';
+                
+                // 이미지 정보 표시
+                const fileSizeKB = Math.round(file.size / 1024);
+                const fileSizeMB = fileSizeKB > 1024 ? (fileSizeKB / 1024).toFixed(1) + 'MB' : fileSizeKB + 'KB';
+                
+                imageInfo.innerHTML = `
+                    <strong>📁 파일명:</strong> ${file.name}<br>
+                    <strong>📏 크기:</strong> ${fileSizeMB}<br>
+                    <strong>📅 업로드 시간:</strong> ${new Date().toLocaleString()}
+                `;
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // 로딩 표시/숨김
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            if (show) {
+                loading.classList.add('show');
+            } else {
+                loading.classList.remove('show');
+            }
+        }
+        
+        // 결과 표시
+        function showResult(data) {
+            const resultArea = document.getElementById('resultArea');
+            const resultHeader = document.getElementById('resultHeader');
+            const confidence = document.getElementById('confidence');
+            const modelType = document.getElementById('modelType');
+            const analysisExplanation = document.getElementById('analysisExplanation');
+            
+            // 결과 헤더
+            if (data.predicted_label === 'FAKE') {
+                resultHeader.textContent = '🤖 AI 생성 이미지로 판단됩니다';
+                resultHeader.className = 'result-header result-fake';
+            } else {
+                resultHeader.textContent = '📸 실제 이미지로 판단됩니다';
+                resultHeader.className = 'result-header result-real';
+            }
+            
+            // 신뢰도 (백엔드에서 이미 퍼센트 값으로 보내므로 그대로 사용)
+            const confidenceValue = typeof data.confidence === 'number' ? 
+                data.confidence : 
+                parseFloat(data.confidence);
+            
+            // 낮은 신뢰도 경고
+            if (data.low_confidence_warning) {
+                confidence.innerHTML = `
+                    <span style="color: #e74c3c; font-weight: bold;">
+                        ⚠️ 신뢰도: ${confidenceValue}% (낮은 신뢰도)
+                    </span>
+                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                        이 결과는 신뢰도가 낮아 부정확할 수 있습니다.
+                    </div>
+                `;
+            } else {
+                confidence.textContent = `신뢰도: ${confidenceValue}%`;
+            }
+            
+            // 모델 타입
+            modelType.textContent = data.model_type || '기본 모델';
+            
+            // 분석 설명
+            const explanation = generateAnalysisExplanation(data);
+            analysisExplanation.innerHTML = explanation;
+            
+            resultArea.classList.add('show');
+        }
+        
+        // 분석 설명 생성
+        function generateAnalysisExplanation(data) {
+            const isFake = data.predicted_label === 'FAKE';
+            const confidence = typeof data.confidence === 'number' ? 
+                data.confidence : 
+                parseFloat(data.confidence);
+            
+            let explanation = `
+                <div class="analysis-title">🔍 분석 결과 설명</div>
+                <div class="analysis-content">
+                    <p>이 이미지는 <strong>${isFake ? 'AI 생성 이미지' : '실제 이미지'}</strong>로 판단되었습니다.</p>
+                    <p>신뢰도 <strong>${confidence}%</strong>로 ${getConfidenceLevel(confidence)} 수준입니다.</p>
+                    
+                    <h4>${isFake ? 'AI 생성 이미지의 특징:' : '실제 이미지의 특징:'}</h4>
+                    <ul class="analysis-points">
+                        ${isFake ? 
+                            '<li>인공적인 텍스처 패턴과 부자연스러운 색상 분포</li>' +
+                            '<li>얼굴이나 객체의 경계선에서 미세한 이상 현상</li>' +
+                            '<li>AI 모델 특유의 반복적인 패턴과 구조</li>' +
+                            '<li>자연스럽지 않은 조명과 그림자 처리</li>' +
+                            '<li>고해상도에서 나타나는 인공적인 노이즈 패턴</li>'
+                            :
+                            '<li>자연스러운 텍스처와 색상 분포</li>' +
+                            '<li>일관된 조명과 그림자 처리</li>' +
+                            '<li>자연스러운 노이즈와 세부사항</li>' +
+                            '<li>물리적으로 합리적인 구조와 형태</li>' +
+                            '<li>실제 촬영 환경의 특성들이 반영됨</li>'
+                        }
+                    </ul>
+                    
+                    <h4>기술적 분석:</h4>
+                    <p>${getTechnicalAnalysis(data)}</p>
+                </div>
+            `;
+            
+            return explanation;
+        }
+        
+        // 신뢰도 레벨 판단
+        function getConfidenceLevel(confidence) {
+            if (confidence >= 95) return '매우 높은';
+            if (confidence >= 85) return '높은';
+            if (confidence >= 70) return '보통';
+            return '낮은';
+        }
+        
+        // 기술적 분석 생성
+        function getTechnicalAnalysis(data) {
+            const confidence = data.confidence;
+            const modelType = data.model_type || '기본 모델';
+            
+            if (modelType === '개선된 모델') {
+                return `개선된 Vision Transformer 모델을 사용하여 224x224 해상도로 분석했습니다. 
+                       이 모델은 99% 이상의 정확도를 보이며, 특히 실제 이미지 탐지에서 뛰어난 성능을 발휘합니다. 
+                       ${confidence >= 95 ? '매우 확실한 판단' : confidence >= 85 ? '신뢰할 수 있는 판단' : '주의가 필요한 판단'}입니다.`;
+            } else {
+                return `기본 모델을 사용하여 32x32 해상도로 분석했습니다. 
+                       ${confidence >= 90 ? '높은 신뢰도' : confidence >= 70 ? '보통 신뢰도' : '낮은 신뢰도'}의 판단입니다.`;
+            }
+        }
+        
+        // 결과 숨김
+        function hideResult() {
+            const resultArea = document.getElementById('resultArea');
+            const uploadedImage = document.getElementById('uploadedImage');
+            const imageInfo = document.getElementById('imageInfo');
+            
+            resultArea.classList.remove('show');
+            uploadedImage.style.display = 'none';
+            imageInfo.innerHTML = '';
+        }
+        
+        // 피드백 표시
+        function showFeedback() {
+            const feedbackArea = document.getElementById('feedbackArea');
+            feedbackArea.classList.add('show');
+        }
+        
+        // 피드백 숨김
+        function hideFeedback() {
+            const feedbackArea = document.getElementById('feedbackArea');
+            const feedbackForm = document.getElementById('feedbackForm');
+            feedbackArea.classList.remove('show');
+            feedbackForm.classList.remove('show');
+        }
+        
+        // 피드백 폼 표시
+        function showFeedbackForm() {
+            const feedbackForm = document.getElementById('feedbackForm');
+            feedbackForm.classList.add('show');
+        }
+        
+        // 피드백 제출 (정확)
+        function submitFeedback(isCorrect) {
+            if (!currentImagePath || !currentPrediction) return;
+            
+            const feedbackData = {
+                image_path: currentImagePath,
+                predicted_label: currentPrediction.predicted_label,
+                predicted_confidence: currentPrediction.confidence,
+                user_feedback: isCorrect ? currentPrediction.predicted_label : 'INCORRECT',
+                is_correct: isCorrect
+            };
+            
+            fetch('/feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(feedbackData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage('피드백이 성공적으로 제출되었습니다!', 'success');
+                } else {
+                    showMessage('피드백 제출에 실패했습니다.', 'error');
+                }
+            })
+            .catch(error => {
+                showMessage('피드백 제출 중 오류가 발생했습니다.', 'error');
+                console.error('Error:', error);
+            });
+        }
+        
+        // 올바른 피드백 제출
+        function submitCorrectFeedback() {
+            const correctLabel = document.getElementById('correctLabel').value;
+            
+            if (!currentImagePath || !currentPrediction) return;
+            
+            const feedbackData = {
+                image_path: currentImagePath,
+                predicted_label: currentPrediction.predicted_label,
+                predicted_confidence: currentPrediction.confidence,
+                user_feedback: correctLabel,
+                is_correct: false
+            };
+            
+            fetch('/feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(feedbackData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage('피드백이 성공적으로 제출되었습니다!', 'success');
+                    document.getElementById('feedbackForm').classList.remove('show');
+                } else {
+                    showMessage('피드백 제출에 실패했습니다.', 'error');
+                }
+            })
+            .catch(error => {
+                showMessage('피드백 제출 중 오류가 발생했습니다.', 'error');
+                console.error('Error:', error);
+            });
+        }
+        
+        // 메시지 표시
+        function showMessage(message, type) {
+            const messageArea = document.getElementById('messageArea');
+            messageArea.innerHTML = `<div class="message ${type}">${message}</div>`;
+            
+            // 3초 후 메시지 자동 제거
+            setTimeout(() => {
+                messageArea.innerHTML = '';
+            }, 3000);
+        }
+        
+        // ESC 키로 사이드바 닫기
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    </script>
+</body>
+</html>

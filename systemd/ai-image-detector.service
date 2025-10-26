@@ -1,0 +1,18 @@
+[Unit]
+Description=AI Image Detector Web Application
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/ai-image-detector
+Environment=PATH=/opt/ai-image-detector/venv/bin
+ExecStart=/opt/ai-image-detector/venv/bin/gunicorn --workers 4 --bind 127.0.0.1:8000 --timeout 120 web_app:app
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

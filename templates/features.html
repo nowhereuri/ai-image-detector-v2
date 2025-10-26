@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기능 소개 - AI Image Detector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        /* 햄버거 메뉴 */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* 사이드바 메뉴 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 80px 20px 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin: 15px 0;
+        }
+        
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        /* 오버레이 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* 메인 컨테이너 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        /* 기능 카드 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .feature-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .feature-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .feature-details h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature-details ul {
+            margin-left: 20px;
+            color: #666;
+        }
+        
+        .feature-details li {
+            margin: 5px 0;
+        }
+        
+        /* 기술 스택 */
+        .tech-stack {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .tech-stack h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .tech-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tech-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .tech-description {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* 성능 지표 */
+        .performance {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .performance h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .performance-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .performance-value {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .performance-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        /* 버튼 */
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-center {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        /* 하단 탭 네비게이션 */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            padding: 8px 12px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            min-width: 60px;
+        }
+        
+        .nav-tab:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .nav-icon {
+            font-size: 1.5em;
+            margin-bottom: 4px;
+        }
+        
+        .nav-label {
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        /* 메인 컨테이너 하단 여백 추가 */
+        .container {
+            margin-bottom: 80px;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+                margin-bottom: 100px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                left: -100%;
+            }
+            
+            .bottom-nav {
+                padding: 8px 0;
+            }
+            
+            .nav-tab {
+                padding: 6px 8px;
+                min-width: 50px;
+            }
+            
+            .nav-icon {
+                font-size: 1.3em;
+            }
+            
+            .nav-label {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 햄버거 메뉴 -->
+    <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- 사이드바 -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="/">🏠 홈</a></li>
+            <li><a href="/features">🔍 기능 소개</a></li>
+            <li><a href="/stats">📊 통계 보기</a></li>
+            <li><a href="/about">ℹ️ 사이트 정보</a></li>
+        </ul>
+    </div>
+    
+    <!-- 오버레이 -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <h1>🔍 기능 소개</h1>
+        <p class="subtitle">AI Image Detector의 강력한 기능들을 살펴보세요</p>
+        
+        <!-- 주요 기능 -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">고정밀 AI 탐지</div>
+                <div class="feature-description">
+                    최신 Vision Transformer 기술을 활용한 99% 이상의 정확도를 자랑하는 AI 이미지 탐지 시스템입니다.
+                </div>
+                <div class="feature-details">
+                    <h4>핵심 특징:</h4>
+                    <ul>
+                        <li>99.42% 전체 정확도</li>
+                        <li>100% REAL 이미지 탐지</li>
+                        <li>99.07% FAKE 이미지 탐지</li>
+                        <li>224x224 고해상도 분석</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <div class="feature-title">상세 분석 설명</div>
+                <div class="feature-description">
+                    단순한 결과가 아닌, 왜 그렇게 판단했는지에 대한 상세한 분석과 설명을 제공합니다.
+                </div>
+                <div class="feature-details">
+                    <h4>분석 내용:</h4>
+                    <ul>
+                        <li>텍스처 패턴 분석</li>
+                        <li>색상 분포 검사</li>
+                        <li>경계선 이상 탐지</li>
+                        <li>조명 및 그림자 분석</li>
+                        <li>노이즈 패턴 검사</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">실시간 통계</div>
+                <div class="feature-description">
+                    사용자 피드백을 바탕으로 한 실시간 성능 통계와 모델 개선 현황을 확인할 수 있습니다.
+                </div>
+                <div class="feature-details">
+                    <h4>통계 기능:</h4>
+                    <ul>
+                        <li>실시간 정확도 모니터링</li>
+                        <li>피드백 기반 성능 추적</li>
+                        <li>오분류 사례 분석</li>
+                        <li>신뢰도 분포 확인</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">지속적 학습</div>
+                <div class="feature-description">
+                    사용자 피드백을 통해 모델이 지속적으로 학습하고 성능을 개선하는 적응형 시스템입니다.
+                </div>
+                <div class="feature-details">
+                    <h4>학습 기능:</h4>
+                    <ul>
+                        <li>사용자 피드백 수집</li>
+                        <li>자동 모델 재훈련</li>
+                        <li>성능 지표 추적</li>
+                        <li>오분류 패턴 학습</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">반응형 디자인</div>
+                <div class="feature-description">
+                    모든 디바이스에서 최적화된 사용자 경험을 제공하는 완전 반응형 웹 인터페이스입니다.
+                </div>
+                <div class="feature-details">
+                    <h4>디자인 특징:</h4>
+                    <ul>
+                        <li>모바일 최적화</li>
+                        <li>태블릿 지원</li>
+                        <li>데스크톱 호환</li>
+                        <li>터치 친화적 UI</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">빠른 처리</div>
+                <div class="feature-description">
+                    최적화된 알고리즘과 효율적인 전처리로 빠른 이미지 분석과 결과 제공을 보장합니다.
+                </div>
+                <div class="feature-details">
+                    <h4>성능 최적화:</h4>
+                    <ul>
+                        <li>평균 0.26초 처리 시간</li>
+                        <li>효율적인 이미지 전처리</li>
+                        <li>GPU 가속 지원</li>
+                        <li>메모리 최적화</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 기술 스택 -->
+        <div class="tech-stack">
+            <h2>🛠️ 기술 스택</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🧠</div>
+                    <div class="tech-name">Vision Transformer</div>
+                    <div class="tech-description">최신 AI 이미지 분석 기술</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🐍</div>
+                    <div class="tech-name">Python</div>
+                    <div class="tech-description">백엔드 개발 언어</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔥</div>
+                    <div class="tech-name">PyTorch</div>
+                    <div class="tech-description">딥러닝 프레임워크</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🤗</div>
+                    <div class="tech-name">Transformers</div>
+                    <div class="tech-description">Hugging Face 라이브러리</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🌐</div>
+                    <div class="tech-name">Flask</div>
+                    <div class="tech-description">웹 프레임워크</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">💾</div>
+                    <div class="tech-name">SQLite</div>
+                    <div class="tech-description">데이터베이스</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 성능 지표 -->
+        <div class="performance">
+            <h2>📈 성능 지표</h2>
+            <div class="performance-grid">
+                <div class="performance-item">
+                    <div class="performance-value">99.42%</div>
+                    <div class="performance-label">전체 정확도</div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-value">100%</div>
+                    <div class="performance-label">REAL 탐지</div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-value">99.07%</div>
+                    <div class="performance-label">FAKE 탐지</div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-value">0.26초</div>
+                    <div class="performance-label">평균 처리 시간</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 액션 버튼 -->
+        <div class="btn-center">
+            <a href="/" class="btn">🚀 지금 시작하기</a>
+            <a href="/stats" class="btn">📊 통계 보기</a>
+        </div>
+    </div>
+    
+    <!-- 하단 탭 네비게이션 -->
+    <div class="bottom-nav">
+        <a href="/" class="nav-tab" id="homeTab">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">홈</div>
+        </a>
+        <a href="/features" class="nav-tab active" id="featuresTab">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">기능소개</div>
+        </a>
+        <a href="/stats" class="nav-tab" id="statsTab">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">통계보기</div>
+        </a>
+        <a href="/about" class="nav-tab" id="aboutTab">
+            <div class="nav-icon">ℹ️</div>
+            <div class="nav-label">사이트정보</div>
+        </a>
+    </div>
+    
+    <script>
+        // 사이드바 토글
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+        
+        // ESC 키로 사이드바 닫기
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    </script>
+</body>
+</html>

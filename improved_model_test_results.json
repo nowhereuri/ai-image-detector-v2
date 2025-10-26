@@ -1,0 +1,2101 @@
+{
+  "model_path": "./test2_retrained_model",
+  "test_date": "2025-10-25T19:37:16.241844",
+  "total_images": 173,
+  "accuracy": 0.9942196531791907,
+  "fake_accuracy": 0.9906542056074766,
+  "real_accuracy": 1.0,
+  "avg_confidence": 0.9937714576032121,
+  "max_confidence": 0.9986458420753479,
+  "min_confidence": 0.5,
+  "confusion_matrix": [
+    [
+      107,
+      0
+    ],
+    [
+      0,
+      66
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n        FAKE       1.00      1.00      1.00       107\n        REAL       1.00      1.00      1.00        66\n\n    accuracy                           1.00       173\n   macro avg       1.00      1.00      1.00       173\nweighted avg       1.00      1.00      1.00       173\n",
+  "misclassified_count": 1,
+  "detailed_results": [
+    {
+      "image_path": "./dataSet/test2/fake\\f (1).jpeg",
+      "image_name": "f (1).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9983464479446411,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (1).jpg",
+      "image_name": "f (1).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997588038444519,
+      "is_correct": true,
+      "original_size": [
+        3189,
+        5667
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (1).png",
+      "image_name": "f (1).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986257553100586,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (10).jpg",
+      "image_name": "f (10).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980466365814209,
+      "is_correct": true,
+      "original_size": [
+        792,
+        792
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (10).png",
+      "image_name": "f (10).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.998126208782196,
+      "is_correct": true,
+      "original_size": [
+        750,
+        553
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (11).jpg",
+      "image_name": "f (11).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978979825973511,
+      "is_correct": true,
+      "original_size": [
+        2765,
+        3456
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (11).png",
+      "image_name": "f (11).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9983282685279846,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (12).jpg",
+      "image_name": "f (12).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9976984858512878,
+      "is_correct": true,
+      "original_size": [
+        4592,
+        3056
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (12).png",
+      "image_name": "f (12).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997636079788208,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (13).jpg",
+      "image_name": "f (13).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9971532821655273,
+      "is_correct": true,
+      "original_size": [
+        4205,
+        2803
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (13).png",
+      "image_name": "f (13).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9979119896888733,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (14).jpg",
+      "image_name": "f (14).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9976295232772827,
+      "is_correct": true,
+      "original_size": [
+        225,
+        225
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (14).png",
+      "image_name": "f (14).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.998129665851593,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (15).jpg",
+      "image_name": "f (15).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977155923843384,
+      "is_correct": true,
+      "original_size": [
+        2666,
+        3999
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (15).png",
+      "image_name": "f (15).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977726340293884,
+      "is_correct": true,
+      "original_size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (16).jpg",
+      "image_name": "f (16).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9954615235328674,
+      "is_correct": true,
+      "original_size": [
+        6135,
+        3834
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (16).png",
+      "image_name": "f (16).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975892305374146,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (17).jpg",
+      "image_name": "f (17).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9979469180107117,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        6000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (18).jpg",
+      "image_name": "f (18).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9963602423667908,
+      "is_correct": true,
+      "original_size": [
+        377,
+        213
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (19).jpg",
+      "image_name": "f (19).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975208640098572,
+      "is_correct": true,
+      "original_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (2).jpeg",
+      "image_name": "f (2).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977078437805176,
+      "is_correct": true,
+      "original_size": [
+        300,
+        168
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (2).jpg",
+      "image_name": "f (2).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986279010772705,
+      "is_correct": true,
+      "original_size": [
+        272,
+        401
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (2).png",
+      "image_name": "f (2).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9984989166259766,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (20).jpg",
+      "image_name": "f (20).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9859380125999451,
+      "is_correct": true,
+      "original_size": [
+        6833,
+        4555
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (21).jpg",
+      "image_name": "f (21).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975849390029907,
+      "is_correct": true,
+      "original_size": [
+        5131,
+        3421
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (22).jpg",
+      "image_name": "f (22).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977290034294128,
+      "is_correct": true,
+      "original_size": [
+        853,
+        1280
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (23).jpg",
+      "image_name": "f (23).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9952400922775269,
+      "is_correct": true,
+      "original_size": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (24).jpg",
+      "image_name": "f (24).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9933776259422302,
+      "is_correct": true,
+      "original_size": [
+        5079,
+        3888
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (25).jpg",
+      "image_name": "f (25).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9985948204994202,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        6000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (26).jpg",
+      "image_name": "f (26).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9943676590919495,
+      "is_correct": true,
+      "original_size": [
+        548,
+        524
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (27).jpg",
+      "image_name": "f (27).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9967934489250183,
+      "is_correct": true,
+      "original_size": [
+        731,
+        1280
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (28).jpg",
+      "image_name": "f (28).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9984787106513977,
+      "is_correct": true,
+      "original_size": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (29).jpg",
+      "image_name": "f (29).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9976939558982849,
+      "is_correct": true,
+      "original_size": [
+        6000,
+        4000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (3).jpeg",
+      "image_name": "f (3).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986385703086853,
+      "is_correct": true,
+      "original_size": [
+        225,
+        225
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (3).jpg",
+      "image_name": "f (3).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9983513355255127,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        2600
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (3).png",
+      "image_name": "f (3).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980112314224243,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (30).jpg",
+      "image_name": "f (30).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9983376264572144,
+      "is_correct": true,
+      "original_size": [
+        5120,
+        3072
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (31).jpg",
+      "image_name": "f (31).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9972276091575623,
+      "is_correct": true,
+      "original_size": [
+        3120,
+        4208
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (32).jpg",
+      "image_name": "f (32).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9965129494667053,
+      "is_correct": true,
+      "original_size": [
+        794,
+        400
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (33).jpg",
+      "image_name": "f (33).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9970705509185791,
+      "is_correct": true,
+      "original_size": [
+        4608,
+        3456
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (34).jpg",
+      "image_name": "f (34).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9984602928161621,
+      "is_correct": true,
+      "original_size": [
+        313,
+        377
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (35).jpg",
+      "image_name": "f (35).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975626468658447,
+      "is_correct": true,
+      "original_size": [
+        363,
+        362
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (36).jpg",
+      "image_name": "f (36).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980922341346741,
+      "is_correct": true,
+      "original_size": [
+        260,
+        289
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (37).jpg",
+      "image_name": "f (37).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978833794593811,
+      "is_correct": true,
+      "original_size": [
+        853,
+        1280
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (38).jpg",
+      "image_name": "f (38).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.996981680393219,
+      "is_correct": true,
+      "original_size": [
+        4272,
+        2848
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (39).jpg",
+      "image_name": "f (39).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9982006549835205,
+      "is_correct": true,
+      "original_size": [
+        257,
+        254
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (4).jpeg",
+      "image_name": "f (4).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9982847571372986,
+      "is_correct": true,
+      "original_size": [
+        194,
+        259
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (4).jpg",
+      "image_name": "f (4).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9974290728569031,
+      "is_correct": true,
+      "original_size": [
+        3936,
+        2952
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (4).png",
+      "image_name": "f (4).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975962042808533,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (40).jpg",
+      "image_name": "f (40).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9972994923591614,
+      "is_correct": true,
+      "original_size": [
+        3000,
+        1997
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (41).jpg",
+      "image_name": "f (41).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997612714767456,
+      "is_correct": true,
+      "original_size": [
+        8192,
+        5464
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (42).jpg",
+      "image_name": "f (42).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9985960125923157,
+      "is_correct": true,
+      "original_size": [
+        5556,
+        3704
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (43).jpg",
+      "image_name": "f (43).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9974195957183838,
+      "is_correct": true,
+      "original_size": [
+        5209,
+        7809
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (44).jpg",
+      "image_name": "f (44).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9975671768188477,
+      "is_correct": true,
+      "original_size": [
+        4284,
+        5712
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (45).jpg",
+      "image_name": "f (45).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9968360662460327,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        6000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (46).jpg",
+      "image_name": "f (46).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9943028688430786,
+      "is_correct": true,
+      "original_size": [
+        2990,
+        3849
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (47).jpg",
+      "image_name": "f (47).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977939128875732,
+      "is_correct": true,
+      "original_size": [
+        5120,
+        2880
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (48).jpg",
+      "image_name": "f (48).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5,
+      "is_correct": false,
+      "original_size": [
+        0,
+        0
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (49).jpg",
+      "image_name": "f (49).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9949506521224976,
+      "is_correct": true,
+      "original_size": [
+        5790,
+        3785
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (5).jpg",
+      "image_name": "f (5).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.996428906917572,
+      "is_correct": true,
+      "original_size": [
+        191,
+        263
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (5).png",
+      "image_name": "f (5).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978387951850891,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (50).jpg",
+      "image_name": "f (50).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986255168914795,
+      "is_correct": true,
+      "original_size": [
+        225,
+        386
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (51).jpg",
+      "image_name": "f (51).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9928098917007446,
+      "is_correct": true,
+      "original_size": [
+        4608,
+        2592
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (52).jpg",
+      "image_name": "f (52).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980581402778625,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        2670
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (53).jpg",
+      "image_name": "f (53).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9889023900032043,
+      "is_correct": true,
+      "original_size": [
+        3144,
+        4608
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (54).jpg",
+      "image_name": "f (54).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986041188240051,
+      "is_correct": true,
+      "original_size": [
+        6000,
+        4000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (55).jpg",
+      "image_name": "f (55).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986458420753479,
+      "is_correct": true,
+      "original_size": [
+        3950,
+        5173
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (56).jpg",
+      "image_name": "f (56).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980314373970032,
+      "is_correct": true,
+      "original_size": [
+        4928,
+        3264
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (57).jpg",
+      "image_name": "f (57).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980727434158325,
+      "is_correct": true,
+      "original_size": [
+        450,
+        461
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (58).jpg",
+      "image_name": "f (58).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9953626394271851,
+      "is_correct": true,
+      "original_size": [
+        4896,
+        3264
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (59).jpg",
+      "image_name": "f (59).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997458279132843,
+      "is_correct": true,
+      "original_size": [
+        4831,
+        2999
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (6).jpg",
+      "image_name": "f (6).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981611371040344,
+      "is_correct": true,
+      "original_size": [
+        5000,
+        5000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (6).png",
+      "image_name": "f (6).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9985198378562927,
+      "is_correct": true,
+      "original_size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (60).jpg",
+      "image_name": "f (60).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9974385499954224,
+      "is_correct": true,
+      "original_size": [
+        635,
+        423
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (61).jpg",
+      "image_name": "f (61).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9979454874992371,
+      "is_correct": true,
+      "original_size": [
+        852,
+        1280
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (62).jpg",
+      "image_name": "f (62).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997769832611084,
+      "is_correct": true,
+      "original_size": [
+        7680,
+        4320
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (63).jpg",
+      "image_name": "f (63).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.997244119644165,
+      "is_correct": true,
+      "original_size": [
+        380,
+        215
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (64).jpg",
+      "image_name": "f (64).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9952758550643921,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        614
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (65).jpg",
+      "image_name": "f (65).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981277585029602,
+      "is_correct": true,
+      "original_size": [
+        4640,
+        6496
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (67).jpg",
+      "image_name": "f (67).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9979641437530518,
+      "is_correct": true,
+      "original_size": [
+        3512,
+        6240
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (68).jpg",
+      "image_name": "f (68).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981751441955566,
+      "is_correct": true,
+      "original_size": [
+        5120,
+        2880
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (69).jpg",
+      "image_name": "f (69).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980547428131104,
+      "is_correct": true,
+      "original_size": [
+        548,
+        537
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (7).jpg",
+      "image_name": "f (7).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981733560562134,
+      "is_correct": true,
+      "original_size": [
+        5133,
+        3374
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (7).png",
+      "image_name": "f (7).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978377223014832,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (70).jpg",
+      "image_name": "f (70).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9961292743682861,
+      "is_correct": true,
+      "original_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (71).jpg",
+      "image_name": "f (71).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977364540100098,
+      "is_correct": true,
+      "original_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (72).jpg",
+      "image_name": "f (72).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981751441955566,
+      "is_correct": true,
+      "original_size": [
+        1300,
+        731
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (73).jpg",
+      "image_name": "f (73).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9979729056358337,
+      "is_correct": true,
+      "original_size": [
+        2714,
+        4071
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (74).jpg",
+      "image_name": "f (74).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9977346658706665,
+      "is_correct": true,
+      "original_size": [
+        960,
+        671
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (76).jpg",
+      "image_name": "f (76).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9982514977455139,
+      "is_correct": true,
+      "original_size": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (77).jpg",
+      "image_name": "f (77).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978827834129333,
+      "is_correct": true,
+      "original_size": [
+        2173,
+        3259
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (78).jpg",
+      "image_name": "f (78).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9984083771705627,
+      "is_correct": true,
+      "original_size": [
+        5472,
+        3078
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (79).jpg",
+      "image_name": "f (79).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9986082911491394,
+      "is_correct": true,
+      "original_size": [
+        3456,
+        5184
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (8).jpg",
+      "image_name": "f (8).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9972188472747803,
+      "is_correct": true,
+      "original_size": [
+        4608,
+        2592
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (8).png",
+      "image_name": "f (8).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9970505237579346,
+      "is_correct": true,
+      "original_size": [
+        1400,
+        1026
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (80).jpg",
+      "image_name": "f (80).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9949775338172913,
+      "is_correct": true,
+      "original_size": [
+        6000,
+        4000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (81).jpg",
+      "image_name": "f (81).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9962989687919617,
+      "is_correct": true,
+      "original_size": [
+        3024,
+        4032
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (82).jpg",
+      "image_name": "f (82).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9980244636535645,
+      "is_correct": true,
+      "original_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (83).jpg",
+      "image_name": "f (83).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9981752634048462,
+      "is_correct": true,
+      "original_size": [
+        4016,
+        6016
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (84).jpg",
+      "image_name": "f (84).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9951642751693726,
+      "is_correct": true,
+      "original_size": [
+        5451,
+        3634
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (85).jpg",
+      "image_name": "f (85).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9983066320419312,
+      "is_correct": true,
+      "original_size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (86).jpg",
+      "image_name": "f (86).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9978092312812805,
+      "is_correct": true,
+      "original_size": [
+        4416,
+        2488
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (87).jpg",
+      "image_name": "f (87).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9952061772346497,
+      "is_correct": true,
+      "original_size": [
+        4272,
+        2848
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (88).jpg",
+      "image_name": "f (88).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9985585808753967,
+      "is_correct": true,
+      "original_size": [
+        3000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (9).jpg",
+      "image_name": "f (9).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9971664547920227,
+      "is_correct": true,
+      "original_size": [
+        7680,
+        4320
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (9).png",
+      "image_name": "f (9).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9963914752006531,
+      "is_correct": true,
+      "original_size": [
+        634,
+        782
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/fake\\f (90).jpg",
+      "image_name": "f (90).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9972314238548279,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        6000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (1).jpeg",
+      "image_name": "r (1).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9974035620689392,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (1).jpg",
+      "image_name": "r (1).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9971791505813599,
+      "is_correct": true,
+      "original_size": [
+        2268,
+        4032
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (10).jpeg",
+      "image_name": "r (10).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.998017430305481,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (10).jpg",
+      "image_name": "r (10).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9956951141357422,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (11).jpeg",
+      "image_name": "r (11).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9971354007720947,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (11).jpg",
+      "image_name": "r (11).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9953315854072571,
+      "is_correct": true,
+      "original_size": [
+        480,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (12).jpeg",
+      "image_name": "r (12).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9980900883674622,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (12).jpg",
+      "image_name": "r (12).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.992492139339447,
+      "is_correct": true,
+      "original_size": [
+        720,
+        960
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (13).jpeg",
+      "image_name": "r (13).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9980220794677734,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (14).jpeg",
+      "image_name": "r (14).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9961472749710083,
+      "is_correct": true,
+      "original_size": [
+        1235,
+        2195
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (14).JPG",
+      "image_name": "r (14).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9975034594535828,
+      "is_correct": true,
+      "original_size": [
+        4388,
+        6582
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (15).jpeg",
+      "image_name": "r (15).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9914507269859314,
+      "is_correct": true,
+      "original_size": [
+        550,
+        367
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (15).jpg",
+      "image_name": "r (15).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9966860413551331,
+      "is_correct": true,
+      "original_size": [
+        736,
+        1288
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (16).jpeg",
+      "image_name": "r (16).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9976763129234314,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (16).jpg",
+      "image_name": "r (16).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9975504279136658,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (17).jpeg",
+      "image_name": "r (17).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9969635605812073,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (17).JPG",
+      "image_name": "r (17).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9972430467605591,
+      "is_correct": true,
+      "original_size": [
+        3024,
+        4032
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (18).jpeg",
+      "image_name": "r (18).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9980074763298035,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (18).jpg",
+      "image_name": "r (18).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9970634579658508,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (19).jpeg",
+      "image_name": "r (19).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9923230409622192,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (19).jpg",
+      "image_name": "r (19).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9983323216438293,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (2).jpeg",
+      "image_name": "r (2).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9820376634597778,
+      "is_correct": true,
+      "original_size": [
+        2876,
+        3835
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (2).JPG",
+      "image_name": "r (2).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9961782693862915,
+      "is_correct": true,
+      "original_size": [
+        4380,
+        6570
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (20).jpeg",
+      "image_name": "r (20).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9932538866996765,
+      "is_correct": true,
+      "original_size": [
+        2515,
+        3355
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (20).jpg",
+      "image_name": "r (20).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9975691437721252,
+      "is_correct": true,
+      "original_size": [
+        1440,
+        1800
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (21).jpg",
+      "image_name": "r (21).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9976557493209839,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (22).jpg",
+      "image_name": "r (22).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9946927428245544,
+      "is_correct": true,
+      "original_size": [
+        736,
+        1593
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (23).jpg",
+      "image_name": "r (23).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9962607026100159,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (24).jpg",
+      "image_name": "r (24).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9925445318222046,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (25).jpg",
+      "image_name": "r (25).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9927859902381897,
+      "is_correct": true,
+      "original_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (26).JPG",
+      "image_name": "r (26).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.997751772403717,
+      "is_correct": true,
+      "original_size": [
+        4388,
+        6582
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (27).jpg",
+      "image_name": "r (27).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9905726313591003,
+      "is_correct": true,
+      "original_size": [
+        900,
+        1200
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (28).jpg",
+      "image_name": "r (28).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9944577217102051,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (29).jpg",
+      "image_name": "r (29).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9964996576309204,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (3).jpeg",
+      "image_name": "r (3).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9976231455802917,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (30).jpg",
+      "image_name": "r (30).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9984146356582642,
+      "is_correct": true,
+      "original_size": [
+        480,
+        640
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (31).JPG",
+      "image_name": "r (31).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9951809644699097,
+      "is_correct": true,
+      "original_size": [
+        1170,
+        2080
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (32).jpg",
+      "image_name": "r (32).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9949253797531128,
+      "is_correct": true,
+      "original_size": [
+        1440,
+        1800
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (33).jpg",
+      "image_name": "r (33).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9938889741897583,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (34).jpg",
+      "image_name": "r (34).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9975959658622742,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (35).jpg",
+      "image_name": "r (35).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9946532249450684,
+      "is_correct": true,
+      "original_size": [
+        910,
+        683
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (36).jpg",
+      "image_name": "r (36).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.995661199092865,
+      "is_correct": true,
+      "original_size": [
+        720,
+        1253
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (37).jpg",
+      "image_name": "r (37).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9960857629776001,
+      "is_correct": true,
+      "original_size": [
+        736,
+        1308
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (38).jpg",
+      "image_name": "r (38).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9923220276832581,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (39).jpg",
+      "image_name": "r (39).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9977468848228455,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (4).jpeg",
+      "image_name": "r (4).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9982209801673889,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (4).JPG",
+      "image_name": "r (4).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.997373104095459,
+      "is_correct": true,
+      "original_size": [
+        3672,
+        2066
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (40).jpg",
+      "image_name": "r (40).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9935919642448425,
+      "is_correct": true,
+      "original_size": [
+        597,
+        896
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (41).jpg",
+      "image_name": "r (41).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9948953986167908,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (42).jpg",
+      "image_name": "r (42).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9968940019607544,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (43).jpg",
+      "image_name": "r (43).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9984456896781921,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (45).jpg",
+      "image_name": "r (45).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9881826043128967,
+      "is_correct": true,
+      "original_size": [
+        1080,
+        1423
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (46).jpg",
+      "image_name": "r (46).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9974279999732971,
+      "is_correct": true,
+      "original_size": [
+        4000,
+        3000
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (47).jpg",
+      "image_name": "r (47).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9963210821151733,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (48).jpg",
+      "image_name": "r (48).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9977226853370667,
+      "is_correct": true,
+      "original_size": [
+        1440,
+        1800
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (49).jpg",
+      "image_name": "r (49).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9966834187507629,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (5).jpeg",
+      "image_name": "r (5).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.994623064994812,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (5).jpg",
+      "image_name": "r (5).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9982948899269104,
+      "is_correct": true,
+      "original_size": [
+        736,
+        968
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (6).jpeg",
+      "image_name": "r (6).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9961012601852417,
+      "is_correct": true,
+      "original_size": [
+        4032,
+        3024
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (6).jpg",
+      "image_name": "r (6).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9943623542785645,
+      "is_correct": true,
+      "original_size": [
+        1200,
+        1200
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (7).jpeg",
+      "image_name": "r (7).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9887188673019409,
+      "is_correct": true,
+      "original_size": [
+        550,
+        367
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (7).jpg",
+      "image_name": "r (7).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.998199462890625,
+      "is_correct": true,
+      "original_size": [
+        2992,
+        2992
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (8).jpeg",
+      "image_name": "r (8).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9954462647438049,
+      "is_correct": true,
+      "original_size": [
+        2268,
+        4032
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (8).jpg",
+      "image_name": "r (8).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.994146466255188,
+      "is_correct": true,
+      "original_size": [
+        2100,
+        3734
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (9).jpeg",
+      "image_name": "r (9).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9981197714805603,
+      "is_correct": true,
+      "original_size": [
+        2268,
+        4032
+      ]
+    },
+    {
+      "image_path": "./dataSet/test2/real\\r (9).jpg",
+      "image_name": "r (9).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.9968752861022949,
+      "is_correct": true,
+      "original_size": [
+        2268,
+        4032
+      ]
+    }
+  ]
+}

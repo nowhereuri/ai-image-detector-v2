@@ -1,0 +1,2616 @@
+{
+  "test_info": {
+    "model_name": "dima806/ai_vs_real_image_detection",
+    "test_date": "2025-10-25T18:54:41.586377",
+    "total_images": 172
+  },
+  "analysis_table": {
+    "전체 통계": {
+      "총 이미지 수": 172,
+      "정확한 예측": 125,
+      "틀린 예측": 47,
+      "전체 정확도": "72.67%"
+    },
+    "FAKE 이미지 분석": {
+      "총 FAKE 이미지": 106,
+      "올바르게 FAKE로 분류": 92,
+      "REAL로 오분류": 14,
+      "FAKE 정확도": "86.79%"
+    },
+    "REAL 이미지 분석": {
+      "총 REAL 이미지": 66,
+      "올바르게 REAL로 분류": 33,
+      "FAKE로 오분류": 33,
+      "REAL 정확도": "50.00%"
+    },
+    "성능 지표": {
+      "평균 신뢰도": "0.7560",
+      "신뢰도 표준편차": "0.1330",
+      "평균 추론 시간": "0.2619초",
+      "최고 신뢰도": "0.9540",
+      "최저 신뢰도": "0.4819"
+    }
+  },
+  "detailed_results": [
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (1).jpg",
+      "image_name": "f (1).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8400070071220398,
+      "is_correct": true,
+      "inference_time": 0.31971263885498047,
+      "original_size": [
+        3189,
+        5667
+      ],
+      "real_score": 0.16648226976394653,
+      "fake_score": 0.8400070071220398
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (10).jpg",
+      "image_name": "f (10).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8618603348731995,
+      "is_correct": true,
+      "inference_time": 0.3097350597381592,
+      "original_size": [
+        792,
+        792
+      ],
+      "real_score": 0.12481344491243362,
+      "fake_score": 0.8618603348731995
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (11).jpg",
+      "image_name": "f (11).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6878269910812378,
+      "is_correct": true,
+      "inference_time": 0.2887885570526123,
+      "original_size": [
+        2765,
+        3456
+      ],
+      "real_score": 0.302694171667099,
+      "fake_score": 0.6878269910812378
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (12).jpg",
+      "image_name": "f (12).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.86150723695755,
+      "is_correct": true,
+      "inference_time": 0.2869079113006592,
+      "original_size": [
+        4592,
+        3056
+      ],
+      "real_score": 0.14205466210842133,
+      "fake_score": 0.86150723695755
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (13).jpg",
+      "image_name": "f (13).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5364863872528076,
+      "is_correct": true,
+      "inference_time": 0.2668426036834717,
+      "original_size": [
+        4205,
+        2803
+      ],
+      "real_score": 0.4792895019054413,
+      "fake_score": 0.5364863872528076
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (14).jpg",
+      "image_name": "f (14).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.922285258769989,
+      "is_correct": true,
+      "inference_time": 0.29475975036621094,
+      "original_size": [
+        225,
+        225
+      ],
+      "real_score": 0.08030346781015396,
+      "fake_score": 0.922285258769989
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (15).jpg",
+      "image_name": "f (15).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5099453330039978,
+      "is_correct": true,
+      "inference_time": 0.28778886795043945,
+      "original_size": [
+        2666,
+        3999
+      ],
+      "real_score": 0.4646607041358948,
+      "fake_score": 0.5099453330039978
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (16).jpg",
+      "image_name": "f (16).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7628718018531799,
+      "is_correct": true,
+      "inference_time": 0.18831396102905273,
+      "original_size": [
+        6135,
+        3834
+      ],
+      "real_score": 0.252962201833725,
+      "fake_score": 0.7628718018531799
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (17).jpg",
+      "image_name": "f (17).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7199926376342773,
+      "is_correct": true,
+      "inference_time": 0.28553271293640137,
+      "original_size": [
+        4000,
+        6000
+      ],
+      "real_score": 0.28291890025138855,
+      "fake_score": 0.7199926376342773
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (18).jpg",
+      "image_name": "f (18).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.832396388053894,
+      "is_correct": true,
+      "inference_time": 0.31071043014526367,
+      "original_size": [
+        377,
+        213
+      ],
+      "real_score": 0.16879768669605255,
+      "fake_score": 0.832396388053894
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (19).jpg",
+      "image_name": "f (19).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9353039264678955,
+      "is_correct": true,
+      "inference_time": 0.29175376892089844,
+      "original_size": [
+        640,
+        640
+      ],
+      "real_score": 0.06612605601549149,
+      "fake_score": 0.9353039264678955
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (2).jpg",
+      "image_name": "f (2).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7713307738304138,
+      "is_correct": true,
+      "inference_time": 0.2877686023712158,
+      "original_size": [
+        272,
+        401
+      ],
+      "real_score": 0.23352795839309692,
+      "fake_score": 0.7713307738304138
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (20).jpg",
+      "image_name": "f (20).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8378486633300781,
+      "is_correct": true,
+      "inference_time": 0.2446424961090088,
+      "original_size": [
+        6833,
+        4555
+      ],
+      "real_score": 0.15777896344661713,
+      "fake_score": 0.8378486633300781
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (21).jpg",
+      "image_name": "f (21).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8975656032562256,
+      "is_correct": true,
+      "inference_time": 0.29975175857543945,
+      "original_size": [
+        5131,
+        3421
+      ],
+      "real_score": 0.12328819930553436,
+      "fake_score": 0.8975656032562256
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (22).jpg",
+      "image_name": "f (22).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.889829695224762,
+      "is_correct": true,
+      "inference_time": 0.27781081199645996,
+      "original_size": [
+        853,
+        1280
+      ],
+      "real_score": 0.09059745818376541,
+      "fake_score": 0.889829695224762
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (23).jpg",
+      "image_name": "f (23).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.5418744087219238,
+      "is_correct": false,
+      "inference_time": 0.154616117477417,
+      "original_size": [
+        3840,
+        2160
+      ],
+      "real_score": 0.5418744087219238,
+      "fake_score": 0.5373147130012512
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (24).jpg",
+      "image_name": "f (24).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.6548722982406616,
+      "is_correct": false,
+      "inference_time": 0.2438671588897705,
+      "original_size": [
+        5079,
+        3888
+      ],
+      "real_score": 0.6548722982406616,
+      "fake_score": 0.3738904595375061
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (25).jpg",
+      "image_name": "f (25).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.9426522850990295,
+      "is_correct": false,
+      "inference_time": 0.4733302593231201,
+      "original_size": [
+        4000,
+        6000
+      ],
+      "real_score": 0.9426522850990295,
+      "fake_score": 0.05400913581252098
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (26).jpg",
+      "image_name": "f (26).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9362715482711792,
+      "is_correct": true,
+      "inference_time": 0.30174946784973145,
+      "original_size": [
+        548,
+        524
+      ],
+      "real_score": 0.06576362252235413,
+      "fake_score": 0.9362715482711792
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (27).jpg",
+      "image_name": "f (27).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8302853107452393,
+      "is_correct": true,
+      "inference_time": 0.2439112663269043,
+      "original_size": [
+        731,
+        1280
+      ],
+      "real_score": 0.16287505626678467,
+      "fake_score": 0.8302853107452393
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (28).jpg",
+      "image_name": "f (28).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.8705354332923889,
+      "is_correct": false,
+      "inference_time": 0.27231907844543457,
+      "original_size": [
+        3840,
+        2160
+      ],
+      "real_score": 0.8705354332923889,
+      "fake_score": 0.12924724817276
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (29).jpg",
+      "image_name": "f (29).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9096940159797668,
+      "is_correct": true,
+      "inference_time": 0.2840850353240967,
+      "original_size": [
+        6000,
+        4000
+      ],
+      "real_score": 0.076878122985363,
+      "fake_score": 0.9096940159797668
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (3).jpg",
+      "image_name": "f (3).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9043012857437134,
+      "is_correct": true,
+      "inference_time": 0.3049304485321045,
+      "original_size": [
+        4000,
+        2600
+      ],
+      "real_score": 0.09043508768081665,
+      "fake_score": 0.9043012857437134
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (30).jpg",
+      "image_name": "f (30).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7733470797538757,
+      "is_correct": true,
+      "inference_time": 0.17562365531921387,
+      "original_size": [
+        5120,
+        3072
+      ],
+      "real_score": 0.2111557424068451,
+      "fake_score": 0.7733470797538757
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (31).jpg",
+      "image_name": "f (31).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8391314744949341,
+      "is_correct": true,
+      "inference_time": 0.28980088233947754,
+      "original_size": [
+        3120,
+        4208
+      ],
+      "real_score": 0.15719594061374664,
+      "fake_score": 0.8391314744949341
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (32).jpg",
+      "image_name": "f (32).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6748566031455994,
+      "is_correct": true,
+      "inference_time": 0.26186490058898926,
+      "original_size": [
+        794,
+        400
+      ],
+      "real_score": 0.30289289355278015,
+      "fake_score": 0.6748566031455994
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (33).jpg",
+      "image_name": "f (33).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7691900134086609,
+      "is_correct": true,
+      "inference_time": 0.35262393951416016,
+      "original_size": [
+        4608,
+        3456
+      ],
+      "real_score": 0.23015771806240082,
+      "fake_score": 0.7691900134086609
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (34).jpg",
+      "image_name": "f (34).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7071355581283569,
+      "is_correct": true,
+      "inference_time": 0.31172609329223633,
+      "original_size": [
+        313,
+        377
+      ],
+      "real_score": 0.3418184518814087,
+      "fake_score": 0.7071355581283569
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (35).jpg",
+      "image_name": "f (35).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6879664659500122,
+      "is_correct": true,
+      "inference_time": 0.27582621574401855,
+      "original_size": [
+        363,
+        362
+      ],
+      "real_score": 0.27643173933029175,
+      "fake_score": 0.6879664659500122
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (36).jpg",
+      "image_name": "f (36).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7874504923820496,
+      "is_correct": true,
+      "inference_time": 0.3207082748413086,
+      "original_size": [
+        260,
+        289
+      ],
+      "real_score": 0.24051226675510406,
+      "fake_score": 0.7874504923820496
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (37).jpg",
+      "image_name": "f (37).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7581495046615601,
+      "is_correct": true,
+      "inference_time": 0.30774474143981934,
+      "original_size": [
+        853,
+        1280
+      ],
+      "real_score": 0.24104245007038116,
+      "fake_score": 0.7581495046615601
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (38).jpg",
+      "image_name": "f (38).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6416805386543274,
+      "is_correct": true,
+      "inference_time": 0.3495023250579834,
+      "original_size": [
+        4272,
+        2848
+      ],
+      "real_score": 0.33803510665893555,
+      "fake_score": 0.6416805386543274
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (39).jpg",
+      "image_name": "f (39).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8267615437507629,
+      "is_correct": true,
+      "inference_time": 0.3555874824523926,
+      "original_size": [
+        257,
+        254
+      ],
+      "real_score": 0.17133894562721252,
+      "fake_score": 0.8267615437507629
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (4).jpg",
+      "image_name": "f (4).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.932933509349823,
+      "is_correct": false,
+      "inference_time": 0.28279829025268555,
+      "original_size": [
+        3936,
+        2952
+      ],
+      "real_score": 0.932933509349823,
+      "fake_score": 0.06642673164606094
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (40).jpg",
+      "image_name": "f (40).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.6095393300056458,
+      "is_correct": false,
+      "inference_time": 0.16519641876220703,
+      "original_size": [
+        3000,
+        1997
+      ],
+      "real_score": 0.6095393300056458,
+      "fake_score": 0.39250582456588745
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (41).jpg",
+      "image_name": "f (41).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8253921866416931,
+      "is_correct": true,
+      "inference_time": 0.26784658432006836,
+      "original_size": [
+        8192,
+        5464
+      ],
+      "real_score": 0.17133109271526337,
+      "fake_score": 0.8253921866416931
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (42).jpg",
+      "image_name": "f (42).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6867509484291077,
+      "is_correct": true,
+      "inference_time": 0.2430124282836914,
+      "original_size": [
+        5556,
+        3704
+      ],
+      "real_score": 0.302877277135849,
+      "fake_score": 0.6867509484291077
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (43).jpg",
+      "image_name": "f (43).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8822221755981445,
+      "is_correct": true,
+      "inference_time": 0.28478312492370605,
+      "original_size": [
+        5209,
+        7809
+      ],
+      "real_score": 0.14357134699821472,
+      "fake_score": 0.8822221755981445
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (44).jpg",
+      "image_name": "f (44).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8274043798446655,
+      "is_correct": true,
+      "inference_time": 0.164581298828125,
+      "original_size": [
+        4284,
+        5712
+      ],
+      "real_score": 0.16904222965240479,
+      "fake_score": 0.8274043798446655
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (45).jpg",
+      "image_name": "f (45).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.5587813258171082,
+      "is_correct": false,
+      "inference_time": 0.27980685234069824,
+      "original_size": [
+        4000,
+        6000
+      ],
+      "real_score": 0.5587813258171082,
+      "fake_score": 0.4411564767360687
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (46).jpg",
+      "image_name": "f (46).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8972511887550354,
+      "is_correct": true,
+      "inference_time": 0.2344529628753662,
+      "original_size": [
+        2990,
+        3849
+      ],
+      "real_score": 0.07448972761631012,
+      "fake_score": 0.8972511887550354
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (47).jpg",
+      "image_name": "f (47).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8514437079429626,
+      "is_correct": true,
+      "inference_time": 0.21846604347229004,
+      "original_size": [
+        5120,
+        2880
+      ],
+      "real_score": 0.17124418914318085,
+      "fake_score": 0.8514437079429626
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (49).jpg",
+      "image_name": "f (49).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5627450942993164,
+      "is_correct": true,
+      "inference_time": 0.3922863006591797,
+      "original_size": [
+        5790,
+        3785
+      ],
+      "real_score": 0.47484222054481506,
+      "fake_score": 0.5627450942993164
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (5).jpg",
+      "image_name": "f (5).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9181693196296692,
+      "is_correct": true,
+      "inference_time": 0.3246769905090332,
+      "original_size": [
+        191,
+        263
+      ],
+      "real_score": 0.07639816403388977,
+      "fake_score": 0.9181693196296692
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (50).jpg",
+      "image_name": "f (50).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8599588871002197,
+      "is_correct": true,
+      "inference_time": 0.25786399841308594,
+      "original_size": [
+        225,
+        386
+      ],
+      "real_score": 0.15864142775535583,
+      "fake_score": 0.8599588871002197
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (51).jpg",
+      "image_name": "f (51).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7878841161727905,
+      "is_correct": true,
+      "inference_time": 0.2087721824645996,
+      "original_size": [
+        4608,
+        2592
+      ],
+      "real_score": 0.2563880980014801,
+      "fake_score": 0.7878841161727905
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (52).jpg",
+      "image_name": "f (52).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.5497580766677856,
+      "is_correct": false,
+      "inference_time": 0.2216043472290039,
+      "original_size": [
+        4000,
+        2670
+      ],
+      "real_score": 0.5497580766677856,
+      "fake_score": 0.48424023389816284
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (53).jpg",
+      "image_name": "f (53).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8056359887123108,
+      "is_correct": true,
+      "inference_time": 0.19562363624572754,
+      "original_size": [
+        3144,
+        4608
+      ],
+      "real_score": 0.19608071446418762,
+      "fake_score": 0.8056359887123108
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (54).jpg",
+      "image_name": "f (54).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7777872085571289,
+      "is_correct": true,
+      "inference_time": 0.3219728469848633,
+      "original_size": [
+        6000,
+        4000
+      ],
+      "real_score": 0.22530056536197662,
+      "fake_score": 0.7777872085571289
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (55).jpg",
+      "image_name": "f (55).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9055450558662415,
+      "is_correct": true,
+      "inference_time": 0.24737763404846191,
+      "original_size": [
+        3950,
+        5173
+      ],
+      "real_score": 0.0891266018152237,
+      "fake_score": 0.9055450558662415
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (56).jpg",
+      "image_name": "f (56).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.9031115174293518,
+      "is_correct": false,
+      "inference_time": 0.20455408096313477,
+      "original_size": [
+        4928,
+        3264
+      ],
+      "real_score": 0.9031115174293518,
+      "fake_score": 0.08846472203731537
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (57).jpg",
+      "image_name": "f (57).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7636225819587708,
+      "is_correct": true,
+      "inference_time": 0.24138283729553223,
+      "original_size": [
+        450,
+        461
+      ],
+      "real_score": 0.2795792818069458,
+      "fake_score": 0.7636225819587708
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (58).jpg",
+      "image_name": "f (58).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8601250052452087,
+      "is_correct": true,
+      "inference_time": 0.28205180168151855,
+      "original_size": [
+        4896,
+        3264
+      ],
+      "real_score": 0.1312234103679657,
+      "fake_score": 0.8601250052452087
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (59).jpg",
+      "image_name": "f (59).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.7475699782371521,
+      "is_correct": false,
+      "inference_time": 0.20448780059814453,
+      "original_size": [
+        4831,
+        2999
+      ],
+      "real_score": 0.7475699782371521,
+      "fake_score": 0.28815996646881104
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (6).jpg",
+      "image_name": "f (6).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9270367622375488,
+      "is_correct": true,
+      "inference_time": 0.17606353759765625,
+      "original_size": [
+        5000,
+        5000
+      ],
+      "real_score": 0.08139412105083466,
+      "fake_score": 0.9270367622375488
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (60).jpg",
+      "image_name": "f (60).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7115946412086487,
+      "is_correct": true,
+      "inference_time": 0.16746306419372559,
+      "original_size": [
+        635,
+        423
+      ],
+      "real_score": 0.32427340745925903,
+      "fake_score": 0.7115946412086487
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (61).jpg",
+      "image_name": "f (61).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6807079911231995,
+      "is_correct": true,
+      "inference_time": 0.37007927894592285,
+      "original_size": [
+        852,
+        1280
+      ],
+      "real_score": 0.3020104467868805,
+      "fake_score": 0.6807079911231995
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (62).jpg",
+      "image_name": "f (62).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5642246603965759,
+      "is_correct": true,
+      "inference_time": 0.28905439376831055,
+      "original_size": [
+        7680,
+        4320
+      ],
+      "real_score": 0.46298620104789734,
+      "fake_score": 0.5642246603965759
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (63).jpg",
+      "image_name": "f (63).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9268358945846558,
+      "is_correct": true,
+      "inference_time": 0.30771613121032715,
+      "original_size": [
+        380,
+        215
+      ],
+      "real_score": 0.07155800610780716,
+      "fake_score": 0.9268358945846558
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (64).jpg",
+      "image_name": "f (64).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9298519492149353,
+      "is_correct": true,
+      "inference_time": 0.26781582832336426,
+      "original_size": [
+        1024,
+        614
+      ],
+      "real_score": 0.05852799117565155,
+      "fake_score": 0.9298519492149353
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (65).jpg",
+      "image_name": "f (65).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8909051418304443,
+      "is_correct": true,
+      "inference_time": 0.25332188606262207,
+      "original_size": [
+        4640,
+        6496
+      ],
+      "real_score": 0.09557250887155533,
+      "fake_score": 0.8909051418304443
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (67).jpg",
+      "image_name": "f (67).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7233662009239197,
+      "is_correct": true,
+      "inference_time": 0.23636412620544434,
+      "original_size": [
+        3512,
+        6240
+      ],
+      "real_score": 0.30368876457214355,
+      "fake_score": 0.7233662009239197
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (68).jpg",
+      "image_name": "f (68).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7898505926132202,
+      "is_correct": true,
+      "inference_time": 0.14596295356750488,
+      "original_size": [
+        5120,
+        2880
+      ],
+      "real_score": 0.20282793045043945,
+      "fake_score": 0.7898505926132202
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (69).jpg",
+      "image_name": "f (69).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.798035204410553,
+      "is_correct": true,
+      "inference_time": 0.19751834869384766,
+      "original_size": [
+        548,
+        537
+      ],
+      "real_score": 0.23250316083431244,
+      "fake_score": 0.798035204410553
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (7).jpg",
+      "image_name": "f (7).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6317315697669983,
+      "is_correct": true,
+      "inference_time": 0.25037693977355957,
+      "original_size": [
+        5133,
+        3374
+      ],
+      "real_score": 0.34260186553001404,
+      "fake_score": 0.6317315697669983
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (70).jpg",
+      "image_name": "f (70).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6164408326148987,
+      "is_correct": true,
+      "inference_time": 0.20450544357299805,
+      "original_size": [
+        640,
+        640
+      ],
+      "real_score": 0.3611818850040436,
+      "fake_score": 0.6164408326148987
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (71).jpg",
+      "image_name": "f (71).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6569162607192993,
+      "is_correct": true,
+      "inference_time": 0.21173477172851562,
+      "original_size": [
+        640,
+        640
+      ],
+      "real_score": 0.3080552816390991,
+      "fake_score": 0.6569162607192993
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (72).jpg",
+      "image_name": "f (72).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8648217916488647,
+      "is_correct": true,
+      "inference_time": 0.22144341468811035,
+      "original_size": [
+        1300,
+        731
+      ],
+      "real_score": 0.13758672773838043,
+      "fake_score": 0.8648217916488647
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (73).jpg",
+      "image_name": "f (73).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5719639658927917,
+      "is_correct": true,
+      "inference_time": 0.28130340576171875,
+      "original_size": [
+        2714,
+        4071
+      ],
+      "real_score": 0.410419225692749,
+      "fake_score": 0.5719639658927917
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (74).jpg",
+      "image_name": "f (74).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9314925074577332,
+      "is_correct": true,
+      "inference_time": 0.2648589611053467,
+      "original_size": [
+        960,
+        671
+      ],
+      "real_score": 0.06662847846746445,
+      "fake_score": 0.9314925074577332
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (76).jpg",
+      "image_name": "f (76).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8843892216682434,
+      "is_correct": true,
+      "inference_time": 0.29677295684814453,
+      "original_size": [
+        3840,
+        2160
+      ],
+      "real_score": 0.1112063005566597,
+      "fake_score": 0.8843892216682434
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (77).jpg",
+      "image_name": "f (77).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.5313035249710083,
+      "is_correct": false,
+      "inference_time": 0.20650053024291992,
+      "original_size": [
+        2173,
+        3259
+      ],
+      "real_score": 0.5313035249710083,
+      "fake_score": 0.46699589490890503
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (78).jpg",
+      "image_name": "f (78).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.5025349259376526,
+      "is_correct": true,
+      "inference_time": 0.25438404083251953,
+      "original_size": [
+        5472,
+        3078
+      ],
+      "real_score": 0.4370652735233307,
+      "fake_score": 0.5025349259376526
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (79).jpg",
+      "image_name": "f (79).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.7695173621177673,
+      "is_correct": false,
+      "inference_time": 0.16958284378051758,
+      "original_size": [
+        3456,
+        5184
+      ],
+      "real_score": 0.7695173621177673,
+      "fake_score": 0.2581605613231659
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (8).jpg",
+      "image_name": "f (8).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6333979368209839,
+      "is_correct": true,
+      "inference_time": 0.18103575706481934,
+      "original_size": [
+        4608,
+        2592
+      ],
+      "real_score": 0.3639213740825653,
+      "fake_score": 0.6333979368209839
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (80).jpg",
+      "image_name": "f (80).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9525904655456543,
+      "is_correct": true,
+      "inference_time": 0.20349812507629395,
+      "original_size": [
+        6000,
+        4000
+      ],
+      "real_score": 0.04973898082971573,
+      "fake_score": 0.9525904655456543
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (81).jpg",
+      "image_name": "f (81).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8834049701690674,
+      "is_correct": true,
+      "inference_time": 0.3735508918762207,
+      "original_size": [
+        3024,
+        4032
+      ],
+      "real_score": 0.11185089498758316,
+      "fake_score": 0.8834049701690674
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (82).jpg",
+      "image_name": "f (82).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8557029366493225,
+      "is_correct": true,
+      "inference_time": 0.23790693283081055,
+      "original_size": [
+        640,
+        640
+      ],
+      "real_score": 0.1644926816225052,
+      "fake_score": 0.8557029366493225
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (83).jpg",
+      "image_name": "f (83).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6290533542633057,
+      "is_correct": true,
+      "inference_time": 0.3297700881958008,
+      "original_size": [
+        4016,
+        6016
+      ],
+      "real_score": 0.4171842038631439,
+      "fake_score": 0.6290533542633057
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (84).jpg",
+      "image_name": "f (84).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8173902630805969,
+      "is_correct": true,
+      "inference_time": 0.28348731994628906,
+      "original_size": [
+        5451,
+        3634
+      ],
+      "real_score": 0.18852722644805908,
+      "fake_score": 0.8173902630805969
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (85).jpg",
+      "image_name": "f (85).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7389190196990967,
+      "is_correct": true,
+      "inference_time": 0.2957756519317627,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.24649493396282196,
+      "fake_score": 0.7389190196990967
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (86).jpg",
+      "image_name": "f (86).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7070714831352234,
+      "is_correct": true,
+      "inference_time": 0.24913978576660156,
+      "original_size": [
+        4416,
+        2488
+      ],
+      "real_score": 0.3032896816730499,
+      "fake_score": 0.7070714831352234
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (87).jpg",
+      "image_name": "f (87).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9313605427742004,
+      "is_correct": true,
+      "inference_time": 0.15794777870178223,
+      "original_size": [
+        4272,
+        2848
+      ],
+      "real_score": 0.0688038170337677,
+      "fake_score": 0.9313605427742004
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (88).jpg",
+      "image_name": "f (88).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.8167843222618103,
+      "is_correct": false,
+      "inference_time": 0.38103270530700684,
+      "original_size": [
+        3000,
+        3000
+      ],
+      "real_score": 0.8167843222618103,
+      "fake_score": 0.19488020241260529
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (9).jpg",
+      "image_name": "f (9).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "REAL",
+      "confidence": 0.5855425000190735,
+      "is_correct": false,
+      "inference_time": 0.30475664138793945,
+      "original_size": [
+        7680,
+        4320
+      ],
+      "real_score": 0.5855425000190735,
+      "fake_score": 0.41596969962120056
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (90).jpg",
+      "image_name": "f (90).jpg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7232876420021057,
+      "is_correct": true,
+      "inference_time": 0.3157026767730713,
+      "original_size": [
+        4000,
+        6000
+      ],
+      "real_score": 0.3148704171180725,
+      "fake_score": 0.7232876420021057
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (1).jpeg",
+      "image_name": "f (1).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8605947494506836,
+      "is_correct": true,
+      "inference_time": 0.2708249092102051,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.1558258831501007,
+      "fake_score": 0.8605947494506836
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (2).jpeg",
+      "image_name": "f (2).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8383417129516602,
+      "is_correct": true,
+      "inference_time": 0.2523519992828369,
+      "original_size": [
+        300,
+        168
+      ],
+      "real_score": 0.1587533801794052,
+      "fake_score": 0.8383417129516602
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (3).jpeg",
+      "image_name": "f (3).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9540340900421143,
+      "is_correct": true,
+      "inference_time": 0.3037242889404297,
+      "original_size": [
+        225,
+        225
+      ],
+      "real_score": 0.04789901152253151,
+      "fake_score": 0.9540340900421143
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (4).jpeg",
+      "image_name": "f (4).jpeg",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9003278017044067,
+      "is_correct": true,
+      "inference_time": 0.28577494621276855,
+      "original_size": [
+        194,
+        259
+      ],
+      "real_score": 0.09118952602148056,
+      "fake_score": 0.9003278017044067
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (1).png",
+      "image_name": "f (1).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7665593028068542,
+      "is_correct": true,
+      "inference_time": 0.2897677421569824,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.23891490697860718,
+      "fake_score": 0.7665593028068542
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (10).png",
+      "image_name": "f (10).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9475966691970825,
+      "is_correct": true,
+      "inference_time": 0.2748067378997803,
+      "original_size": [
+        750,
+        553
+      ],
+      "real_score": 0.05577382817864418,
+      "fake_score": 0.9475966691970825
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (11).png",
+      "image_name": "f (11).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9147897958755493,
+      "is_correct": true,
+      "inference_time": 0.24588894844055176,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.08640279620885849,
+      "fake_score": 0.9147897958755493
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (12).png",
+      "image_name": "f (12).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8849003314971924,
+      "is_correct": true,
+      "inference_time": 0.15661001205444336,
+      "original_size": [
+        1024,
+        1536
+      ],
+      "real_score": 0.10074640065431595,
+      "fake_score": 0.8849003314971924
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (13).png",
+      "image_name": "f (13).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8631121516227722,
+      "is_correct": true,
+      "inference_time": 0.1495800018310547,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.1369199901819229,
+      "fake_score": 0.8631121516227722
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (14).png",
+      "image_name": "f (14).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.7608036994934082,
+      "is_correct": true,
+      "inference_time": 0.2459104061126709,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.2632496953010559,
+      "fake_score": 0.7608036994934082
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (15).png",
+      "image_name": "f (15).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8903282880783081,
+      "is_correct": true,
+      "inference_time": 0.3117363452911377,
+      "original_size": [
+        1536,
+        1024
+      ],
+      "real_score": 0.10470537096261978,
+      "fake_score": 0.8903282880783081
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (16).png",
+      "image_name": "f (16).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.920155942440033,
+      "is_correct": true,
+      "inference_time": 0.26386141777038574,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.0801272764801979,
+      "fake_score": 0.920155942440033
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (2).png",
+      "image_name": "f (2).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8858909010887146,
+      "is_correct": true,
+      "inference_time": 0.40500307083129883,
+      "original_size": [
+        1024,
+        1536
+      ],
+      "real_score": 0.10778842866420746,
+      "fake_score": 0.8858909010887146
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (3).png",
+      "image_name": "f (3).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.6737833023071289,
+      "is_correct": true,
+      "inference_time": 0.27231335639953613,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.3210812509059906,
+      "fake_score": 0.6737833023071289
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (4).png",
+      "image_name": "f (4).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8270809054374695,
+      "is_correct": true,
+      "inference_time": 0.3157174587249756,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.15329544246196747,
+      "fake_score": 0.8270809054374695
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (5).png",
+      "image_name": "f (5).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8841266632080078,
+      "is_correct": true,
+      "inference_time": 0.3910343647003174,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.13883854448795319,
+      "fake_score": 0.8841266632080078
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (6).png",
+      "image_name": "f (6).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.9376139640808105,
+      "is_correct": true,
+      "inference_time": 0.39052629470825195,
+      "original_size": [
+        1920,
+        1080
+      ],
+      "real_score": 0.055837482213974,
+      "fake_score": 0.9376139640808105
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (7).png",
+      "image_name": "f (7).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8490264415740967,
+      "is_correct": true,
+      "inference_time": 0.21047616004943848,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "real_score": 0.14257636666297913,
+      "fake_score": 0.8490264415740967
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (8).png",
+      "image_name": "f (8).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8896851539611816,
+      "is_correct": true,
+      "inference_time": 0.20151901245117188,
+      "original_size": [
+        1400,
+        1026
+      ],
+      "real_score": 0.09804275631904602,
+      "fake_score": 0.8896851539611816
+    },
+    {
+      "image_path": "./dataSet/test2/FAKE\\f (9).png",
+      "image_name": "f (9).png",
+      "true_label": "FAKE",
+      "predicted_label": "FAKE",
+      "confidence": 0.8758929371833801,
+      "is_correct": true,
+      "inference_time": 0.21697545051574707,
+      "original_size": [
+        634,
+        782
+      ],
+      "real_score": 0.14494596421718597,
+      "fake_score": 0.8758929371833801
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (1).jpg",
+      "image_name": "r (1).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6937390565872192,
+      "is_correct": false,
+      "inference_time": 0.27582502365112305,
+      "original_size": [
+        2268,
+        4032
+      ],
+      "real_score": 0.29610246419906616,
+      "fake_score": 0.6937390565872192
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (10).jpg",
+      "image_name": "r (10).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.5973262190818787,
+      "is_correct": false,
+      "inference_time": 0.16759347915649414,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.3689085841178894,
+      "fake_score": 0.5973262190818787
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (11).jpg",
+      "image_name": "r (11).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5294185280799866,
+      "is_correct": true,
+      "inference_time": 0.14334368705749512,
+      "original_size": [
+        480,
+        640
+      ],
+      "real_score": 0.5294185280799866,
+      "fake_score": 0.4786098897457123
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (12).jpg",
+      "image_name": "r (12).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7424296736717224,
+      "is_correct": false,
+      "inference_time": 0.15181684494018555,
+      "original_size": [
+        720,
+        960
+      ],
+      "real_score": 0.2549987733364105,
+      "fake_score": 0.7424296736717224
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (14).JPG",
+      "image_name": "r (14).JPG",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.5774317383766174,
+      "is_correct": false,
+      "inference_time": 0.3127007484436035,
+      "original_size": [
+        4388,
+        6582
+      ],
+      "real_score": 0.5027681589126587,
+      "fake_score": 0.5774317383766174
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (15).jpg",
+      "image_name": "r (15).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.569878101348877,
+      "is_correct": true,
+      "inference_time": 0.31869006156921387,
+      "original_size": [
+        736,
+        1288
+      ],
+      "real_score": 0.569878101348877,
+      "fake_score": 0.4256495535373688
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (16).jpg",
+      "image_name": "r (16).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.4970739483833313,
+      "is_correct": false,
+      "inference_time": 0.32169556617736816,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.48141154646873474,
+      "fake_score": 0.4970739483833313
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (17).JPG",
+      "image_name": "r (17).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.7451955080032349,
+      "is_correct": true,
+      "inference_time": 0.2937905788421631,
+      "original_size": [
+        3024,
+        4032
+      ],
+      "real_score": 0.7451955080032349,
+      "fake_score": 0.31991472840309143
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (18).jpg",
+      "image_name": "r (18).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6857157945632935,
+      "is_correct": false,
+      "inference_time": 0.293015718460083,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.32786330580711365,
+      "fake_score": 0.6857157945632935
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (19).jpg",
+      "image_name": "r (19).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6376203894615173,
+      "is_correct": false,
+      "inference_time": 0.27387547492980957,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.37447571754455566,
+      "fake_score": 0.6376203894615173
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (2).JPG",
+      "image_name": "r (2).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6941617727279663,
+      "is_correct": true,
+      "inference_time": 0.2174673080444336,
+      "original_size": [
+        4380,
+        6570
+      ],
+      "real_score": 0.6941617727279663,
+      "fake_score": 0.278397798538208
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (20).jpg",
+      "image_name": "r (20).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8245588541030884,
+      "is_correct": false,
+      "inference_time": 0.14802169799804688,
+      "original_size": [
+        1440,
+        1800
+      ],
+      "real_score": 0.16324804723262787,
+      "fake_score": 0.8245588541030884
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (21).jpg",
+      "image_name": "r (21).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7151851058006287,
+      "is_correct": false,
+      "inference_time": 0.2339320182800293,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.32682016491889954,
+      "fake_score": 0.7151851058006287
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (22).jpg",
+      "image_name": "r (22).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.9177678227424622,
+      "is_correct": false,
+      "inference_time": 0.25090909004211426,
+      "original_size": [
+        736,
+        1593
+      ],
+      "real_score": 0.08500297367572784,
+      "fake_score": 0.9177678227424622
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (23).jpg",
+      "image_name": "r (23).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5904982089996338,
+      "is_correct": true,
+      "inference_time": 0.23350119590759277,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.5904982089996338,
+      "fake_score": 0.3729526698589325
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (24).jpg",
+      "image_name": "r (24).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6382295489311218,
+      "is_correct": true,
+      "inference_time": 0.2887847423553467,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.6382295489311218,
+      "fake_score": 0.4061540365219116
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (25).jpg",
+      "image_name": "r (25).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7234416007995605,
+      "is_correct": false,
+      "inference_time": 0.22044730186462402,
+      "original_size": [
+        640,
+        640
+      ],
+      "real_score": 0.2337602972984314,
+      "fake_score": 0.7234416007995605
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (26).JPG",
+      "image_name": "r (26).JPG",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6182708740234375,
+      "is_correct": false,
+      "inference_time": 0.23897099494934082,
+      "original_size": [
+        4388,
+        6582
+      ],
+      "real_score": 0.44009724259376526,
+      "fake_score": 0.6182708740234375
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (27).jpg",
+      "image_name": "r (27).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5328430533409119,
+      "is_correct": true,
+      "inference_time": 0.2044963836669922,
+      "original_size": [
+        900,
+        1200
+      ],
+      "real_score": 0.5328430533409119,
+      "fake_score": 0.5094149112701416
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (28).jpg",
+      "image_name": "r (28).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.8499583005905151,
+      "is_correct": true,
+      "inference_time": 0.2348952293395996,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.8499583005905151,
+      "fake_score": 0.1579645425081253
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (29).jpg",
+      "image_name": "r (29).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.647250771522522,
+      "is_correct": true,
+      "inference_time": 0.48531270027160645,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.647250771522522,
+      "fake_score": 0.353270560503006
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (30).jpg",
+      "image_name": "r (30).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7788061499595642,
+      "is_correct": false,
+      "inference_time": 0.32469725608825684,
+      "original_size": [
+        480,
+        640
+      ],
+      "real_score": 0.2230316549539566,
+      "fake_score": 0.7788061499595642
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (31).JPG",
+      "image_name": "r (31).JPG",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.8782185912132263,
+      "is_correct": true,
+      "inference_time": 0.1501152515411377,
+      "original_size": [
+        1170,
+        2080
+      ],
+      "real_score": 0.8782185912132263,
+      "fake_score": 0.1166829988360405
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (32).jpg",
+      "image_name": "r (32).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6300106048583984,
+      "is_correct": true,
+      "inference_time": 0.14118504524230957,
+      "original_size": [
+        1440,
+        1800
+      ],
+      "real_score": 0.6300106048583984,
+      "fake_score": 0.35671111941337585
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (33).jpg",
+      "image_name": "r (33).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6263523101806641,
+      "is_correct": true,
+      "inference_time": 0.3047525882720947,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.6263523101806641,
+      "fake_score": 0.4118390679359436
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (34).jpg",
+      "image_name": "r (34).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.5023192763328552,
+      "is_correct": false,
+      "inference_time": 0.26422739028930664,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.4786289930343628,
+      "fake_score": 0.5023192763328552
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (35).jpg",
+      "image_name": "r (35).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5354493260383606,
+      "is_correct": true,
+      "inference_time": 0.23939132690429688,
+      "original_size": [
+        910,
+        683
+      ],
+      "real_score": 0.5354493260383606,
+      "fake_score": 0.43406203389167786
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (36).jpg",
+      "image_name": "r (36).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6997672915458679,
+      "is_correct": false,
+      "inference_time": 0.22542953491210938,
+      "original_size": [
+        720,
+        1253
+      ],
+      "real_score": 0.28126800060272217,
+      "fake_score": 0.6997672915458679
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (37).jpg",
+      "image_name": "r (37).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.734273374080658,
+      "is_correct": false,
+      "inference_time": 0.2758159637451172,
+      "original_size": [
+        736,
+        1308
+      ],
+      "real_score": 0.24871772527694702,
+      "fake_score": 0.734273374080658
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (38).jpg",
+      "image_name": "r (38).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.8581398725509644,
+      "is_correct": true,
+      "inference_time": 0.30074262619018555,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.8581398725509644,
+      "fake_score": 0.1690976470708847
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (39).jpg",
+      "image_name": "r (39).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7131034135818481,
+      "is_correct": false,
+      "inference_time": 0.22761845588684082,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.26431795954704285,
+      "fake_score": 0.7131034135818481
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (4).JPG",
+      "image_name": "r (4).JPG",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8923924565315247,
+      "is_correct": false,
+      "inference_time": 0.31969451904296875,
+      "original_size": [
+        3672,
+        2066
+      ],
+      "real_score": 0.11962253600358963,
+      "fake_score": 0.8923924565315247
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (40).jpg",
+      "image_name": "r (40).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.5121180415153503,
+      "is_correct": false,
+      "inference_time": 0.25235891342163086,
+      "original_size": [
+        597,
+        896
+      ],
+      "real_score": 0.4593505859375,
+      "fake_score": 0.5121180415153503
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (41).jpg",
+      "image_name": "r (41).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5187246799468994,
+      "is_correct": true,
+      "inference_time": 0.24182343482971191,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.5187246799468994,
+      "fake_score": 0.4945959150791168
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (42).jpg",
+      "image_name": "r (42).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6465098261833191,
+      "is_correct": true,
+      "inference_time": 0.2025008201599121,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.6465098261833191,
+      "fake_score": 0.3923589587211609
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (43).jpg",
+      "image_name": "r (43).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.9120267033576965,
+      "is_correct": false,
+      "inference_time": 0.14194416999816895,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.08127865195274353,
+      "fake_score": 0.9120267033576965
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (45).jpg",
+      "image_name": "r (45).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5023360848426819,
+      "is_correct": true,
+      "inference_time": 0.18953371047973633,
+      "original_size": [
+        1080,
+        1423
+      ],
+      "real_score": 0.5023360848426819,
+      "fake_score": 0.4785131812095642
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (46).jpg",
+      "image_name": "r (46).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6706154346466064,
+      "is_correct": true,
+      "inference_time": 0.22941803932189941,
+      "original_size": [
+        4000,
+        3000
+      ],
+      "real_score": 0.6706154346466064,
+      "fake_score": 0.40906181931495667
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (47).jpg",
+      "image_name": "r (47).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.9152456521987915,
+      "is_correct": false,
+      "inference_time": 0.2403860092163086,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.08688969910144806,
+      "fake_score": 0.9152456521987915
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (48).jpg",
+      "image_name": "r (48).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5070725083351135,
+      "is_correct": true,
+      "inference_time": 0.2443709373474121,
+      "original_size": [
+        1440,
+        1800
+      ],
+      "real_score": 0.5070725083351135,
+      "fake_score": 0.5063900351524353
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (49).jpg",
+      "image_name": "r (49).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.766960620880127,
+      "is_correct": true,
+      "inference_time": 0.21445560455322266,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.766960620880127,
+      "fake_score": 0.2455863207578659
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (5).jpg",
+      "image_name": "r (5).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.9092225432395935,
+      "is_correct": false,
+      "inference_time": 0.22343802452087402,
+      "original_size": [
+        736,
+        968
+      ],
+      "real_score": 0.08235345035791397,
+      "fake_score": 0.9092225432395935
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (6).jpg",
+      "image_name": "r (6).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8424717783927917,
+      "is_correct": false,
+      "inference_time": 0.30074357986450195,
+      "original_size": [
+        1200,
+        1200
+      ],
+      "real_score": 0.13998940587043762,
+      "fake_score": 0.8424717783927917
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (7).jpg",
+      "image_name": "r (7).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.930766224861145,
+      "is_correct": false,
+      "inference_time": 0.30274224281311035,
+      "original_size": [
+        2992,
+        2992
+      ],
+      "real_score": 0.06399344652891159,
+      "fake_score": 0.930766224861145
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (8).jpg",
+      "image_name": "r (8).jpg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.707741379737854,
+      "is_correct": false,
+      "inference_time": 0.2927708625793457,
+      "original_size": [
+        2100,
+        3734
+      ],
+      "real_score": 0.2769796848297119,
+      "fake_score": 0.707741379737854
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (9).jpg",
+      "image_name": "r (9).jpg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.8659943342208862,
+      "is_correct": true,
+      "inference_time": 0.37206339836120605,
+      "original_size": [
+        2268,
+        4032
+      ],
+      "real_score": 0.8659943342208862,
+      "fake_score": 0.15389856696128845
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (1).jpeg",
+      "image_name": "r (1).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.5556734204292297,
+      "is_correct": true,
+      "inference_time": 0.3132154941558838,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.5556734204292297,
+      "fake_score": 0.4472704827785492
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (10).jpeg",
+      "image_name": "r (10).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6188297867774963,
+      "is_correct": true,
+      "inference_time": 0.1549546718597412,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.6188297867774963,
+      "fake_score": 0.429013192653656
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (11).jpeg",
+      "image_name": "r (11).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.8025022149085999,
+      "is_correct": true,
+      "inference_time": 0.4892904758453369,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.8025022149085999,
+      "fake_score": 0.22689275443553925
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (12).jpeg",
+      "image_name": "r (12).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8370011448860168,
+      "is_correct": false,
+      "inference_time": 0.2169804573059082,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.1866977959871292,
+      "fake_score": 0.8370011448860168
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (13).jpeg",
+      "image_name": "r (13).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.9003470540046692,
+      "is_correct": false,
+      "inference_time": 0.25433850288391113,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.09542877972126007,
+      "fake_score": 0.9003470540046692
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (14).jpeg",
+      "image_name": "r (14).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7237411141395569,
+      "is_correct": false,
+      "inference_time": 0.21047520637512207,
+      "original_size": [
+        1235,
+        2195
+      ],
+      "real_score": 0.29748186469078064,
+      "fake_score": 0.7237411141395569
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (15).jpeg",
+      "image_name": "r (15).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.49877917766571045,
+      "is_correct": true,
+      "inference_time": 0.28328704833984375,
+      "original_size": [
+        550,
+        367
+      ],
+      "real_score": 0.49877917766571045,
+      "fake_score": 0.4851941466331482
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (16).jpeg",
+      "image_name": "r (16).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6916502118110657,
+      "is_correct": true,
+      "inference_time": 0.30472803115844727,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.6916502118110657,
+      "fake_score": 0.3202851712703705
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (17).jpeg",
+      "image_name": "r (17).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.7921455502510071,
+      "is_correct": true,
+      "inference_time": 0.29479336738586426,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.7921455502510071,
+      "fake_score": 0.22552771866321564
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (18).jpeg",
+      "image_name": "r (18).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6742332577705383,
+      "is_correct": true,
+      "inference_time": 0.2930731773376465,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.6742332577705383,
+      "fake_score": 0.3286608159542084
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (19).jpeg",
+      "image_name": "r (19).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6359369158744812,
+      "is_correct": false,
+      "inference_time": 0.34862208366394043,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.28069478273391724,
+      "fake_score": 0.6359369158744812
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (2).jpeg",
+      "image_name": "r (2).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6428463459014893,
+      "is_correct": true,
+      "inference_time": 0.18652963638305664,
+      "original_size": [
+        2876,
+        3835
+      ],
+      "real_score": 0.6428463459014893,
+      "fake_score": 0.38190585374832153
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (20).jpeg",
+      "image_name": "r (20).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8203411102294922,
+      "is_correct": false,
+      "inference_time": 0.14644384384155273,
+      "original_size": [
+        2515,
+        3355
+      ],
+      "real_score": 0.160719633102417,
+      "fake_score": 0.8203411102294922
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (3).jpeg",
+      "image_name": "r (3).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6038506627082825,
+      "is_correct": true,
+      "inference_time": 0.23494386672973633,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.6038506627082825,
+      "fake_score": 0.38353532552719116
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (4).jpeg",
+      "image_name": "r (4).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.7762372493743896,
+      "is_correct": true,
+      "inference_time": 0.2783052921295166,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.7762372493743896,
+      "fake_score": 0.22017338871955872
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (5).jpeg",
+      "image_name": "r (5).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.6264756917953491,
+      "is_correct": false,
+      "inference_time": 0.27083683013916016,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.3381139636039734,
+      "fake_score": 0.6264756917953491
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (6).jpeg",
+      "image_name": "r (6).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.6835723519325256,
+      "is_correct": true,
+      "inference_time": 0.2314302921295166,
+      "original_size": [
+        4032,
+        3024
+      ],
+      "real_score": 0.6835723519325256,
+      "fake_score": 0.38198500871658325
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (7).jpeg",
+      "image_name": "r (7).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "REAL",
+      "confidence": 0.4818969666957855,
+      "is_correct": true,
+      "inference_time": 0.21847152709960938,
+      "original_size": [
+        550,
+        367
+      ],
+      "real_score": 0.4818969666957855,
+      "fake_score": 0.4790439307689667
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (8).jpeg",
+      "image_name": "r (8).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.7396690845489502,
+      "is_correct": false,
+      "inference_time": 0.255889892578125,
+      "original_size": [
+        2268,
+        4032
+      ],
+      "real_score": 0.23657774925231934,
+      "fake_score": 0.7396690845489502
+    },
+    {
+      "image_path": "./dataSet/test2/REAL\\r (9).jpeg",
+      "image_name": "r (9).jpeg",
+      "true_label": "REAL",
+      "predicted_label": "FAKE",
+      "confidence": 0.8998560905456543,
+      "is_correct": false,
+      "inference_time": 0.22643399238586426,
+      "original_size": [
+        2268,
+        4032
+      ],
+      "real_score": 0.08612034469842911,
+      "fake_score": 0.8998560905456543
+    }
+  ]
+}
